@@ -1,0 +1,35 @@
+.nav-mobile-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Transparansi latar belakang */
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  pointer-events: none; /* Tidak dapat di-klik */
+  transition: opacity 0.3s ease-in-out; /* Transisi opasitas */
+}
+
+.nav-mobile-container.active {
+  opacity: 1; /* Menampilkan pop-up */
+  pointer-events: auto; /* Bisa di-klik */
+}
+
+.nav-mobile-content {
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto; /* Scrolling jika konten terlalu banyak */
+  transition: transform 0.3s ease-in-out; /* Transisi animasi masuk */
+  transform: translateY(-50px); /* Mulai dengan posisi di atas */
+}
+
+.nav-mobile-container.active .nav-mobile-content {
+  transform: translateY(0); /* Menampilkan dengan animasi masuk */
+}

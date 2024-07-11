@@ -1,0 +1,18 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Sesuaikan dengan berat font yang Anda inginkan */
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Contoh untuk tebal */
+  font-style: normal;
+}

@@ -28,7 +28,8 @@ function BoxComponent({ title, content, image }) {
             <img
               src={image}
               alt={title}
-              className="h-full max-h-64 w-auto object-contain p-2 px-10"
+              className="h-full max-h-64 w-auto object-contain px-10 bg-cover bg-center "
+              style={{ backgroundImage: `url(${image})` }}
             />
           </div>
         </>

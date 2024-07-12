@@ -33,7 +33,7 @@ function Gallery() {
   }, []);
 
   return (
-    <div id='gallery' className="container mx-auto px-4 py-8">
+    <div id='galery' className="container mx-auto px-4 py-8">
       <p className="montserrat-regular mb-8">[Gallery]</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((image, index) => (

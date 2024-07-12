@@ -27,7 +27,7 @@ function BoxComponent({ title, content, image, bgColor, fgColor }) {
               {content}
             </p>
           </ScrollAnimation>
-          <div className="mt-4 flex justify-center items-center max-h-full bg-cover bg-center rounded-md">
+          <div className="mt-4 flex justify-center items-center max-h-full bg-cover bg-center rounded-md ">
             <img
               src={image}
               alt={title}

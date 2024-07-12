@@ -33,8 +33,8 @@ function About(){
          </h1>
          <ul className="list-disc pl-5  space-y-2 text-lg text-gray-800 montserrat-regular">
     <li>(PREMIUM) Full Body, drawing your character from head to toe</li>
-    <li>(Standard) Half Body or Waist Up, drawing your character from Head to Waist (adjusting the viewing angle)</li>
-    <li>(Basic) Bust Up, drawing the character you from the chest up (adjust the viewing angle)</li>
+    <li>(STANDARD) Half Body or Waist Up, drawing your character from Head to Waist (adjusting the viewing angle)</li>
+    <li>(BASIC) Bust Up, drawing the character you from the chest up (adjust the viewing angle)</li>
   </ul>
          </ScrollAnimation>
         </div>

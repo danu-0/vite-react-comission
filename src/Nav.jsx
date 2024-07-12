@@ -6,8 +6,8 @@ import './style/index.css'
 const menuItems = [
   { text: "Home", href: "#home" },
   { text: "About", href: "#about" },
-  { text: "Gallery", href: "#" },
-  { text: "Contact", href: "footer" },
+  { text: "Gallery", href: "#galery" },
+  { text: "Contact", href: "#footer" },
 ];
 
 function Nav() {
@@ -29,10 +29,10 @@ function Nav() {
 
   return (
     <div className={`relative`}>
-      {/* Navbar Header */}
+     
       <div className={`h-20 flex justify-between items-center px-6 py-3 bg-gray-100 text-custom-secondary z-10 ${isOpen ? 'fixed top-0 left-0 w-full bg-neutral-900 text-gray-200' : ''}`}>
         <h1 className="font-bold text-xl montserrat-bold">SNIPER KUN COMMISSION</h1>
-        {/* Desktop Menu */}
+       
         <div className="hidden sm:flex gap-8 items-center justify-center">
           {menuItems.map((item, index) => (
             <motion.a
@@ -62,7 +62,7 @@ function Nav() {
         >
           Follow Me
         </motion.button>
-        {/* Mobile Menu  */}
+       
         <div className="sm:hidden">
           <motion.div
             initial={{ rotate: 0 }}
@@ -79,7 +79,7 @@ function Nav() {
         </div>
       </div>
 
-      {/* Expanded Navbar (Mobile) */}
+    
       <AnimatePresence>
         {isOpen && (
           <motion.div 

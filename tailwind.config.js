@@ -6,9 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        'custom-light': '0 2px 4px rgba(255, 255, 255, 0.3)',
+      dropShadow: {
+        'custom-light': '0 2px 7px rgba(255, 255, 255, 0.3)',
         'custom-dark': '0 2px 4px rgba(0, 0, 0, 0.3)',
+       'custom-red': '0px 0 1px rgba(255, 0, 0, 0.5)',
       },
       colors: {
         'custom-black': '#09090b',

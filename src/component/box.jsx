@@ -1,16 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import ScrollAnimation from "../utils/scrollAnimation";
 
-function BoxComponent({ title, content, image }) {
+function BoxComponent({ title, content, image, bgColor, fgColor }) {
   const [isClicked, setIsClicked] = useState(false);
-
 
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
-  
 
-    return (
-      <div
+  return (
+    <div
       className="min-h-96 w-full items-center bg-custom-secondary text-center rounded-md sm:h-72 h-72 py-5 text-gray-200"
       onClick={handleClick}
       style={{
@@ -20,10 +19,14 @@ function BoxComponent({ title, content, image }) {
         transition: "background-image 0.3s ease",
       }}
     >
-         {!isClicked && (
+      {!isClicked && (
         <>
-          <h2 className="text-xl font-bold mb-2">{title}</h2>
-          <p>{content}</p>
+          <h2 className="text-xl font-bold mb-2 reveal-type" data-bg-color={bgColor} data-fg-color={fgColor}>{title}</h2>
+          <ScrollAnimation>
+            <p className="reveal-type" data-bg-color={bgColor} data-fg-color={fgColor}>
+              {content}
+            </p>
+          </ScrollAnimation>
           <div className="mt-4 flex justify-center items-center max-h-full bg-cover bg-center rounded-md">
             <img
               src={image}
@@ -34,7 +37,8 @@ function BoxComponent({ title, content, image }) {
           </div>
         </>
       )}
-      </div>
-    );
-  }
-export default BoxComponent  
+    </div>
+  );
+}
+
+export default BoxComponent;

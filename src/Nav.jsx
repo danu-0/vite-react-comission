@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import './style/index.css'
 
 const menuItems = [
-  { text: "Home", href: "#" },
+  { text: "Home", href: "#home" },
+  { text: "About", href: "#about" },
   { text: "Gallery", href: "#" },
-  { text: "About", href: "#" },
-  { text: "Contact", href: "#" },
+  { text: "Contact", href: "footer" },
 ];
 
 function Nav() {
@@ -15,6 +15,16 @@ function Nav() {
 
   const toggleNavBar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleMenuClick = (href) => {
+    if (href.startsWith("#")) {
+      const targetId = href.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -28,6 +38,10 @@ function Nav() {
             <motion.a
               key={index}
               href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleMenuClick(item.href);
+              }}
               className="hover:text-slate-900 montserrat-regular"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -38,9 +52,8 @@ function Nav() {
             </motion.a>
           ))}
         </div>
-        {/* Follow Me Button */}
         <motion.button 
-          className="montserrat-regular hidden sm:flex items-center justify-center bg-custom-secondary text-gray-100 font-normal rounded-xl px-10 py-2 hover:bg-slate-900 hover:text-white"
+          className="montserrat-regular hidden sm:flex items-center justify-center bg-custom-secondary text-gray-100 font-normal rounded-xl px-10 py-2 hover:bg-gray-600 duration-500"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
@@ -49,7 +62,7 @@ function Nav() {
         >
           Follow Me
         </motion.button>
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu  */}
         <div className="sm:hidden">
           <motion.div
             initial={{ rotate: 0 }}
@@ -81,6 +94,11 @@ function Nav() {
                 <motion.a
                   key={index}
                   href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMenuClick(item.href);
+                    setIsOpen(false);
+                  }}
                   className="block px-6 py-2 hover:bg-gray-700 transition-all montserrat-regular"
                   initial={{ opacity: 0.5, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}

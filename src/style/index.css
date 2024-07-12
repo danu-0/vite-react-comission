@@ -11,6 +11,12 @@
   font-style: normal;
 }
 
+.montserrat-medium {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Sesuaikan dengan berat font yang Anda inginkan */
+  font-style: normal;
+}
+
 .montserrat-bold {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; /* Contoh untuk tebal */

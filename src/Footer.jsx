@@ -1,6 +1,6 @@
 function Footer (){
     return(
-        <div id="footer" className="flex justify-start flex-col w-full h-auto bg-custom-secondary text-gray-200 px-10 py-10 text-sm">
+        <div id="footer" className="flex justify-start flex-col w-full h-auto bg-custom-secondary text-gray-200 px-10 py-10 mt-10 text-sm">
             <div>
                 <h1 className="text-3xl font-semibold mb-2 montserrat-bold">SNIPER KUN</h1>
             </div>

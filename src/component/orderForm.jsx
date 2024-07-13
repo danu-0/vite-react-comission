@@ -88,14 +88,14 @@ const OrderForm = () => {
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nama">
-            Nama (Wajib)
+          Name (Required)
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="nama"
             name="nama"
             type="text"
-            placeholder="Masukkan nama Anda"
+            placeholder="Enter your name"
             value={formData.nama}
             onChange={handleInputChange}
             required
@@ -103,7 +103,7 @@ const OrderForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="jenisOrder">
-            Jenis Orderan
+          Order Type
           </label>
           <select
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -120,13 +120,13 @@ const OrderForm = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="deskripsi">
-            Deskripsi Pesanan (Wajib)
+          Order Description (Required)
           </label>
           <textarea
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="deskripsi"
             name="deskripsi"
-            placeholder="Deskripsi pesanan Anda"
+            placeholder="Description of your order"
             value={formData.deskripsi}
             onChange={handleInputChange}
             rows="4"
@@ -139,11 +139,11 @@ const OrderForm = () => {
               formValid
                 ? 'bg-green-500 hover:bg-green-800'
                 : 'bg-gray-500 cursor-not-allowed'
-            } text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+            } text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline`}
             type="submit"
             disabled={!formValid}
           >
-            Kirim Ke WhatsApp
+            Send To WhatsApp
           </button>
           <button
             className={`${
@@ -154,7 +154,7 @@ const OrderForm = () => {
             onClick={sendToInstagram}
             disabled={!formValid}
           >
-            Kirim ke Instagram
+            Navigate to Instagram
           </button>
           <button
             className={`${
@@ -165,7 +165,7 @@ const OrderForm = () => {
             onClick={sendToFacebook}
             disabled={!formValid}
           >
-            Kirim ke Facebook
+            Navigate to Facebook
           </button>
         </div>
       </form>

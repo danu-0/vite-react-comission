@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './Nav';
 import Hero from './Hero';
@@ -29,8 +29,18 @@ const App = () => {
   return (
     <Router basename='/vite-react-comission'>
       <Routes>
-        <Route path="/" element={[ <Nav />,<Hero /> ,<About />, <Content />, <Gallery/>,<Footer />]} />
-        <Route path="/order" element={<Order />} />
+        <Route
+          path="/"
+          element={[
+            <Nav key="nav" />,
+            <Hero key="hero" />,
+            <About key="about" />,
+            <Content key="content" />,
+            <Gallery key="gallery" />,
+            <Footer key="footer" />,
+          ]}
+        />
+        <Route path="order" element={<Order />} />
       </Routes>
     </Router>
   );

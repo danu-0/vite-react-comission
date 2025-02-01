@@ -53,7 +53,7 @@ function Nav() {
           ))}
         </div>
         <motion.button 
-          className="montserrat-regular hidden sm:flex items-center justify-center bg-custom-secondary text-gray-100 font-normal rounded-xl px-10 py-2 hover:bg-gray-600 duration-500"
+          className="montserrat-bold hidden sm:flex items-center justify-center bg-custom-secondary text-gray-100 font-normal rounded-xl px-10 py-2 hover:bg-yellow-700 duration-500"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ function Nav() {
             <div className="flex justify-start py-4 px-4">
               <motion.button 
               
-                className="bg-gray-200 text-custom-secondary font-normal rounded-xl px-10 py-2 montserrat-regular hover:bg-gray-600 hover:text-white transition duration-300"
+                className="bg-gray-200 text-custom-secondary font-normal rounded-xl px-10 py-2 montserrat-bold hover:bg-yellow-700 hover:text-white transition duration-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}

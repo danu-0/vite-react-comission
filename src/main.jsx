@@ -10,6 +10,8 @@ import Order from './Order';
 import Splash from './Splash';
 import './style/index.css';
 import Gallery from './Galery';
+import Feature from './Feature';
+import InvoicePage from './page/GenerateInvoice';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -37,10 +39,12 @@ const App = () => {
             <About key="about" />,
             <Content key="content" />,
             <Gallery key="gallery" />,
+            <Feature key="feature"/>,
             <Footer key="footer" />,
           ]}
         />
         <Route path="order" element={<Order />} />
+        <Route path="generate-invoice" element={<InvoicePage/>} />
       </Routes>
     </Router>
   );
